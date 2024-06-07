@@ -15,6 +15,7 @@ export default defineConfig({
       },
       shared: {
         ...dependencies,
+
         react: {
           singleton: true,
           requiredVersion: dependencies.react
@@ -22,6 +23,10 @@ export default defineConfig({
         "react-dom": {
           singleton: true,
           requiredVersion: dependencies["react-dom"]
+        },
+        "react-router-dom": {
+          singleton: true,
+          requiredVersion: dependencies["react-router-dom"]
         }
       }
     }

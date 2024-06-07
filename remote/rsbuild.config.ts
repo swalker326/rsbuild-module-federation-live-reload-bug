@@ -12,7 +12,8 @@ export default defineConfig({
       name: "remote",
       filename: "remoteEntry.js",
       exposes: {
-        "./MicroFrontend": "./src/App"
+        "./MicroFrontend": "./src/App",
+        "./routes": "./src/routes"
       },
       shared: {
         ...dependencies,
@@ -23,6 +24,10 @@ export default defineConfig({
         "react-dom": {
           singleton: true,
           requiredVersion: dependencies["react-dom"]
+        },
+        "react-router-dom": {
+          singleton: true,
+          requiredVersion: dependencies["react-router-dom"]
         }
       }
     }
